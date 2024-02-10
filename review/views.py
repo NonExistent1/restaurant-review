@@ -10,7 +10,12 @@ class RestaurantListView(ListView):
     model = Restaurant
     template_name = "home.html"
 
-class RestaurantReviewListView(DetailView):
-    """Review List View"""
+class RestaurantDetailView(DetailView):
+    """Restaurant Detail View"""
     model = Review
-    template_name = ""
+    template_name = "restaurant_detail.html"
+
+class ReviewDetailView(DetailView):
+    """Review Detail View"""
+    model = Review
+    template_name = "review_detail.html"

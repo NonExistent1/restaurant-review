@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h1>{{ review.restaurant.name }}</h1>
+<button><a href=""></a>Write a Review</button>
+
+{% for review in review.restaurant.reviews.all %}
+    <div class="review-entry">
+    <h2>Author: {{ review.author }} Rating:{{review.rating}} Created: {{review.created}}</h2>
+    <p>{{ review.body }}</p>
+    <h2><a href="{% url 'review_detail' review.pk %}">See Full Review</a></h2>
+    </div>
+{% endfor %}
+
+{% endblock content %}

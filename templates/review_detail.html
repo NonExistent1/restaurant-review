@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h1>{{ review.restaurant.name }}</h1>
+
+<div class="review-entry">
+    <h2>Author: {{ review.author }} Rating:{{review.rating}} Created: {{review.created}}</h2>
+    <p>{{ review.body }}</p>
+    <button><a href=""></a>Edit Review</button>
+    <button><a href=""></a>Delete Review</button>
+</div>
+
+{% endblock content %}

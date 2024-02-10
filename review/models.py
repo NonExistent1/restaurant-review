@@ -7,13 +7,13 @@ class Review(models.Model):
     restaurant = models.ForeignKey(
         "Restaurant",
         on_delete=models.CASCADE,
-        related_name="posts"
+        related_name="reviews"
     )
 
     author = models.ForeignKey(
         "auth.User",
         on_delete=models.CASCADE,
-        related_name="posts"
+        related_name="reviews"
     )
 
     body = models.TextField()
