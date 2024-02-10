@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+
+{% block content %}
+{% for restaurant in restaurant_list %}
+<div class="review-entry">
+    <h2><a href="#">{{ restaurant.name }}</a></h2>
+</div>
+{% endfor %}
+{% endblock content %}
