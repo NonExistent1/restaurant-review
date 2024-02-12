@@ -2,7 +2,7 @@
 
 ## Author
 
-
+Jordyn Kuhn
 
 ## Description
 
@@ -126,8 +126,12 @@ You should also be able to load bootstrap via a CDN link which will save you fro
 
 ## Outside Resources Used
 
-
+N/A
 
 ## Known Problems, Issues, And/Or Errors in the Program
 
-
+No User functionality yet
+No Bootstrap/CSS
+No Tests written yet
+Not Ready for Heroku Deployment
+Lacking Comments on files I've written
