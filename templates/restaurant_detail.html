@@ -2,8 +2,8 @@
 
 {% block content %}
 
-<h1>{{ review.restaurant.name }}</h1>
-<button><a href=""></a>Write a Review</button>
+<h1>{{ restaurant.name }}</h1>
+<p><a href="{% url 'review_new' %}">Write a Review</a></p>
 
 {% for review in review.restaurant.reviews.all %}
     <div class="review-entry">

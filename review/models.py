@@ -26,7 +26,7 @@ class Review(models.Model):
         return self.body
     
     def get_absolute_url(self):
-        return reverse("post_detail", kwargs={"pk": self.pk})
+        return reverse("review_detail", kwargs={"pk": self.pk})
 
 class Restaurant(models.Model):
     name = models.CharField(max_length=150)
@@ -38,5 +38,5 @@ class Restaurant(models.Model):
         return self.name
     
     def get_absolute_url(self):
-        """Get the absolute URL for a single Post"""
-        return reverse("post_detail", kwargs={"pk": self.pk})
+        """Get the absolute URL for a single restaurant"""
+        return reverse("restaurant_detail", kwargs={"pk": self.pk})

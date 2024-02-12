@@ -7,8 +7,8 @@
 <div class="review-entry">
     <h2>Author: {{ review.author }} Rating:{{review.rating}} Created: {{review.created}}</h2>
     <p>{{ review.body }}</p>
-    <button><a href=""></a>Edit Review</button>
-    <button><a href=""></a>Delete Review</button>
+    <p><a href="{% url 'review_edit' review.pk %}">Edit Review</a></p>
+    <p><a href="{% url 'review_delete' review.pk %}">Delete Review</a></p>
 </div>
 
 {% endblock content %}
