@@ -5,12 +5,16 @@ body{
 
 header{
     border-bottom: 1px solid #999;
-    margin-bottom: 2rem;
+    margin-bottom: 5rem;
     display:flex;
 }
 
 header h1 a{
     color: red;
+}
+
+h2 h1{
+    padding-left:2rem;
 }
 
 .nav-left {

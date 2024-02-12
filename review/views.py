@@ -1,3 +1,9 @@
+"""
+Jordyn Kuhn
+CIS 218
+2-12-2024
+"""
+
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.views.generic import ListView, DetailView
 from django.views.generic.edit import CreateView, UpdateView, DeleteView

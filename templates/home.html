@@ -1,9 +1,16 @@
+<!-- 
+    Jordyn Kuhn
+    CIS 218
+    2/12/2024
+-->
+ <!--doctype html-->
+ 
+<html>
 {% extends 'base.html' %}
 
 {% block content %}
 {% for restaurant in restaurant_list %}
-<div class="review-entry">
     <h2><a href="{% url 'restaurant_detail' restaurant.pk %}">{{ restaurant.name }}</a></h2>
-</div>
 {% endfor %}
 {% endblock content %}
+</html>
