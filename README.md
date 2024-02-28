@@ -130,4 +130,4 @@ N/A
 
 ## Known Problems, Issues, And/Or Errors in the Program
 
-Not Ready for Heroku Deployment
+Create and update test's post function doesn't seem to be working.
