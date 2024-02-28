@@ -1,3 +1,9 @@
+"""
+Jordyn Kuhn
+CIS 218
+2-28-2024
+"""
+
 from django.shortcuts import render
 from django.contrib.auth.forms import UserCreationForm
 from django.urls import reverse_lazy

@@ -1,7 +1,7 @@
 """
 Jordyn Kuhn
 CIS 218
-2-12-2024
+2-28-2024
 """
 
 from django.contrib.auth import get_user_model
@@ -101,7 +101,15 @@ class ReviewTests(TestCase):
 
     def test_review_createview(self):
         """test review create view"""
-        response = self.client.post(reverse("review_new"),{"restaurant":self.restaurant.name,"author":self.user.id,"body":"New body","rating":5})
+        response = self.client.post(
+            reverse("review_new"),
+            {
+                "restaurant":self.restaurant.name,
+                "author":self.user.id,
+                "body":"New body",
+                "rating":4
+            }                
+        )
         self.assertEqual(response.status_code, 302)
         self.assertEqual(Review.objects.last().rating, 4)
         self.assertEqual(Review.objects.last().body, "New body")
@@ -113,6 +121,7 @@ class ReviewTests(TestCase):
             {
                 "rating": 3,
                 "body": "updated body",
+                "author":self.user.id,
             },
         )
         self.assertEqual(response.status_code, 302)

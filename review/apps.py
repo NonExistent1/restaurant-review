@@ -1,7 +1,7 @@
 """
 Jordyn Kuhn
 CIS 218
-2-12-2024
+2-28-2024
 """
 
 from django.apps import AppConfig
