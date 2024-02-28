@@ -26,7 +26,7 @@ class ReviewDetailView(DetailView):
     model = Review
     template_name = "review_detail.html"
 
-class ReviewCreateView(CreateView):
+class ReviewCreateView(LoginRequiredMixin, CreateView):
     """Review Create View"""
     model = Review
     template_name = "review_new.html"
@@ -38,17 +38,16 @@ class ReviewCreateView(CreateView):
         initial_data = super().get_initial()
         # Add the author so it is the requests user
         initial_data["author"] = self.request.user
-        initial_data["restaurant.name"] = self.request.user
         # Return the author
         return initial_data
     
-class ReviewUpdateView(UpdateView):
+class ReviewUpdateView(LoginRequiredMixin, UpdateView):
     """Review Update View"""
     model = Review
     template_name = "review_edit.html"
     fields = ["restaurant", "rating", "body"]
 
-class ReviewDeleteView(DeleteView):
+class ReviewDeleteView(LoginRequiredMixin, DeleteView):
     """Review Delete View"""
     model = Review
     template_name = "review_delete.html"

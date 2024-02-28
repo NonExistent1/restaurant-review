@@ -12,11 +12,11 @@
 <h1>{{ restaurant.name }}</h1>
 <p><a href="{% url 'review_new' %}">Write a Review</a></p>
 
-{% for review in review.restaurant.reviews.all %}
+{% for areview in restaurant.reviews.all %}
     <div class="review-entry">
-    <h2>Author: {{ review.author }} Rating:{{review.rating}} Created: {{review.created}}</h2>
-    <p>{{ review.body }}</p>
-    <h2><a href="{% url 'review_detail' review.pk %}">See Full Review</a></h2>
+    <h3>Author: {{ areview.author }} Rating:{{areview.rating}} Created: {{areview.created}}</h2>
+    <p>{{ areview.body }}</p>
+    <h3><a href="{% url 'review_detail' areview.pk %}">See Full Review</a></h2>
     </div>
 {% endfor %}
 

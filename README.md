@@ -130,7 +130,4 @@ N/A
 
 ## Known Problems, Issues, And/Or Errors in the Program
 
-No User functionality yet
-Started to Add Bootstrap/CSS
-No Tests written yet
 Not Ready for Heroku Deployment

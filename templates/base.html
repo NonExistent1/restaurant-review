@@ -20,6 +20,21 @@
                         </li>
                         </ul>
                     </div>
+                    <div class="nav-right">
+                        {% if user.is_authenticated %}
+                            <p class="navbar-brand">
+                                Hi {{ user.username }}!&nbsp;
+                                <a href="{% url 'logout' %}">Logout</a>
+                            </p>
+                            <p><a href="{% url 'review_new' %}">+ New Review</a></p>
+                        {% else %}
+                            <p>You are not logged in.</p>
+                            <p>
+                                <a href="{% url 'login' %}">Login</a> |
+                                <a href="{% url 'signup' %}">Sign Up</a>
+                            </p>
+                        {% endif %}
+                    </div>
                 </div>
             </nav>
         </header>
